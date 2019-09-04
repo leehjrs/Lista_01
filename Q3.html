@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Q3</title>
+		
+	</head>
+
+	<body >
+		  <input type="text" id="txt" />
+		  <input type="button" value="Iniciar" onClick="iniciarCronometro()" />
+		  <input type="button" value="Parar" onClick="pararCronometro()" />
+		  <input type="button" id="zero" value="Zerar" onClick="zerarCronometro()" />
+
+		<script type="text/javascript">
+			var cont=0;
+			var temp;
+			var temp_cont=0;
+			
+			function contarTempo(){
+				document.getElementById('txt').value=cont;
+				cont = cont + 1;
+				temp=setTimeout("contarTempo()",1000);
+			}
+			function iniciarCronometro(){
+				if (!temp_cont){
+					temp_cont=1;
+					contarTempo();
+				}
+			}
+			function pararCronometro(){
+				clearTimeout(temp);
+				temp_cont=0;
+			}
+
+			s
+			function zerarCronometro(){
+				document.getElementById("txt").value = 0;	
+			}
+      
+		</script>
+	
+	</body>
+</html>
